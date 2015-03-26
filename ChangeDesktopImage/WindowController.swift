@@ -51,7 +51,8 @@ class WindowController: NSWindowController {
     var imageBrowserZoom : Float {
         set{
             //self.zoomingSlider.floatValue = newValue
-            self.zoomingPercentageLabel.stringValue = String(format: "%.0f%", newValue * 100.0)
+            self.zoomingPercentageLabel.stringValue = String(format: "%.0f", newValue * 100.0)
+            self.zoomingPercentageLabel.stringValue += "%"
             self.imageBrowserView.setZoomValue(newValue)
             println(newValue)
         }
